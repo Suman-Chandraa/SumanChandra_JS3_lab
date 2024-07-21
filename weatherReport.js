@@ -8,7 +8,7 @@ document.getElementById('getWeather').addEventListener('click', () => {
 });
 
 async function fetchWeather(city) {
-    const apiKey = 'a291a9bbd67b97c3328886985343db14'; // Replace with your OpenWeatherMap API key
+    const apiKey = 'a291a9bbd67b97c3328886985343db14'; // suman-generated multiple time still shows 401
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     try {
@@ -27,7 +27,7 @@ function displayWeather(data) {
     const cityName = data.name;
     const temperature = `${data.main.temp}°C`;
     const description = data.weather[0].description;
-    const iconUrl = `./typescript_playground/JS Weather Application/sky-background-video-conferencing_23-2148639325.avif`;
+    //const iconUrl = `./typescript_playground/JS Weather Application/sky-background-video-conferencing_23-2148639325.avif`;
 
     document.getElementById('cityName').textContent = cityName;
     document.getElementById('temperature').textContent = temperature;
